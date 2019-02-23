@@ -6,6 +6,7 @@
 // Show wins, losses
 
 
+
 $(document).ready(function() {
     var randomNumber = Math.floor(Math.random() * 101) + 19;
 
@@ -16,6 +17,9 @@ $(document).ready(function() {
    // Crystalscounter
 
     var counter = 0;
+    var wins = 0;
+    var losses = 0;
+
 
     var numberOptions = [5, 11, 4, 9];
 
@@ -30,7 +34,7 @@ $(document).ready(function() {
         console.log(numberOptions);
 
     }
-
+   
     
 
     $(".jewel-image").on("click", function() {
@@ -44,11 +48,19 @@ $(document).ready(function() {
         $(".addedScore").html("Your new score is: " + counter);
 
         if (counter === randomNumber) {
-            alert("You win!")
+            wins++;
+            console.log("You win!");
+            console.log(wins);
+           
+            
         }
 
         else if (counter >= randomNumber) {
-            alert("You lose!");
+            losses++;
+            console.log("You lose!");
+            console.log(losses);
+            
+            
         }
 
     
