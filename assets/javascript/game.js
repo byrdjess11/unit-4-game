@@ -10,7 +10,7 @@
 $(document).ready(function() {
     var randomNumber = Math.floor(Math.random() * 101) + 19;
 
-    $(".compuRandom").html("<h1>" + randomNumber + "</h1>");
+    $(".compuRandom").html(randomNumber);
 
 
    
@@ -21,7 +21,7 @@ $(document).ready(function() {
     var losses = 0;
 
 
-    var numberOptions = [5, 11, 4, 9];
+    var numberOptions = [Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1];
 
     for (var i = 0; i < numberOptions.length; i++) {
 
@@ -29,9 +29,9 @@ $(document).ready(function() {
         imageJewel.addClass("jewel-image");
         imageJewel.attr("src", "http://cdn.playbuzz.com/cdn/35910209-2844-45c0-b099-f4d82878d54f/00261fda-4062-4096-81fd-8cf96b9034e8.jpg")
         imageJewel.attr("data-jewel-value", numberOptions[i]);
-        $("#jewel").append(imageJewel);
+        $("#jewel" + (i+1)).append(imageJewel);
 
-        console.log(numberOptions);
+        console.log(numberOptions[i]);
 
     }
    
@@ -48,17 +48,21 @@ $(document).ready(function() {
         $(".addedScore").html("Your new score is: " + counter);
 
         if (counter === randomNumber) {
+            reset();
             wins++;
             console.log("You win!");
             console.log(wins);
-           
+            $(".winsCount").text("Wins: " + wins);
+            
             
         }
 
         else if (counter >= randomNumber) {
             losses++;
+            reset();
             console.log("You lose!");
             console.log(losses);
+            $(".lossesCount").text("Losses: " + losses);
             
             
         }
@@ -66,8 +70,16 @@ $(document).ready(function() {
     
       });
 
+      function reset () {
+
+        counter = 0;
 
 
+
+         }
+
+
+      reset ();
     
 
 });
