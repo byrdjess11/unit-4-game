@@ -1,15 +1,38 @@
 .jewel-image {
+    width: 65px;
+    height: 65px;
+}
+
+.sunflower {
     width: 150px;
-    height: 150px;
+
 }
 
 .container {
-    width: auto;
-    height: auto;
-    background-color: lightblue;
+    margin: auto;
+    text-align: center;
+    background-image: linear-gradient(lightblue, white);
 
 }
 
-.instructions {
-    font-size: 30px;
+.title {
+    font-size: 100px;
+    padding: 20px;
+    color: white;
 }
+
+.compuRandom {
+    font-size: 25px;
+}
+
+.text-content {
+    color: white;
+    font-size: 40px;
+}
+
+
+
+
+
+
+
