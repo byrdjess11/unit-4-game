@@ -8,18 +8,17 @@
 
 
 $(document).ready(function() {
+
+    var wins = 0;
+    var losses = 0;
+
     var randomNumber = Math.floor(Math.random() * 101) + 19;
 
     $(".compuRandom").html(randomNumber);
-
-
    
    // Crystalscounter
 
     var counter = 0;
-    var wins = 0;
-    var losses = 0;
-
 
     var numberOptions = [Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1, Math.floor(Math.random() * 11) + 1];
 
@@ -34,6 +33,7 @@ $(document).ready(function() {
         console.log(numberOptions[i]);
 
     }
+
    
     
 
@@ -48,10 +48,11 @@ $(document).ready(function() {
         $(".addedScore").html("Your new score is: " + counter);
 
         if (counter === randomNumber) {
-            reset();
             wins++;
+            counter = 0;
             console.log("You win!");
             console.log(wins);
+            $(".statement").text("You lost! Try Again.");
             $(".winsCount").text("Wins: " + wins);
             
             
@@ -59,9 +60,11 @@ $(document).ready(function() {
 
         else if (counter >= randomNumber) {
             losses++;
-            reset();
+            counter = 0;
             console.log("You lose!");
             console.log(losses);
+           
+            $(".statement").text("You lost! Try Again.");
             $(".lossesCount").text("Losses: " + losses);
             
             
@@ -71,12 +74,9 @@ $(document).ready(function() {
       });
 
       function reset () {
+        
+    }
 
-        counter = 0;
-
-
-
-         }
 
 
       reset ();

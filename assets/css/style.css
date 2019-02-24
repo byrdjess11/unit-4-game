@@ -1,5 +1,15 @@
-
 .jewel-image {
     width: 150px;
     height: 150px;
+}
+
+.container {
+    width: auto;
+    height: auto;
+    background-color: lightblue;
+
+}
+
+.instructions {
+    font-size: 30px;
 }
