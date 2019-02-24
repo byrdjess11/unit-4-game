@@ -1,9 +1,11 @@
 // Get computer to pick a random number
-// Set a value for each of the four jewel pics
+// Set a value for each of the four sun pics
 // Add value for each pic chosen, show value
 // If value = randomnumber YOU WIN
 // If value > randomNumber You lose, game restarts
 // Show wins, losses
+
+//I was onot able to make to the suns generate a new value when the game restarted!
 
 
 
