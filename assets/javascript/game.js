@@ -50,7 +50,7 @@ $(document).ready(function() {
             wins++;
             $(".statement").text("You won! Can you do it again?");
             $(".winsCount").text("Wins: " + wins);
-            if (wins++) {
+            if (true) {
                 reset();
             }
             
@@ -61,7 +61,7 @@ $(document).ready(function() {
             losses++;
             $(".statement").text("You lost! Try Again.");
             $(".lossesCount").text("Losses: " + losses);
-            if(losses++){
+            if(true){
                 reset();
             }
             
