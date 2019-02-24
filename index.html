@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Flower Power</title>
+  <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/reset.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -11,42 +12,63 @@
 
 <body>
 
+
   <div class= "container">
 
     <header>
 
-        <h1 class="title">Flower Power</h1>
-
+      <h1 class="title">Flower Power</h1>
+  
     </header>
 
-    <div class="text-content">
+  
+    <div class="row" id="text-content">
 
-        <p><div class="compuRandom"></div> </p>
+      <div class="col-sm-4">
+        <img class="sunflower" src="assets/images/sunflower.jpg">
+      </div>
 
+      <div class="col-sm-4">
+          <p> <div class="compuRandom"></div> </p>
+      </div>
+
+      <div class="col-sm-4">
         <div class="statement"></div>
-        <div class="winsCount">Wins:</div>  
+        <br><br>
+        <div class="winsCount">Wins:</div>
         <div class="lossesCount">Losses:</div>
         <div class="addedScore">Your new score is:</div>
-     
       </div>
 
-    <div class="pic-content">
 
-     <img class="sunflower" src="assets/images/sunflower.jpg">    
-      
-      <div id="jewel1" class="flower">
-      </div>
-
-     <div id= "jewel2" class="flower">
-     </div>
-
-      <div id= "jewel3" class="flower">
-      </div>
-
-      <div id= "jewel4" class="flower">
-      </div>
     </div>
-    
+
+    <br><br>
+
+    <div class="row" id="pic-content">
+
+      <div class="col-sm-3">
+        <div id="sun1" class="flower">
+        </div> 
+      </div>
+
+      <div class="col-sm-3">
+        <div id= "sun2" class="flower">
+        </div> 
+      </div>
+
+      <div class="col-sm-3">
+        <div id= "sun3" class="flower">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div id= "sun4" class="flower">
+        </div>
+      </div>
+
+    </div>
+   
+
   </div>
     
 

@@ -12,6 +12,8 @@ $(document).ready(function() {
     var wins = 0;
     var losses = 0;
 
+    $(".statement").text("Give me the power to flower! Click each sun and try to match the number listed.");
+
     var randomNumber = Math.floor(Math.random() * 101) + 19;
 
     $(".compuRandom").html(randomNumber);
@@ -28,7 +30,7 @@ $(document).ready(function() {
         imageJewel.addClass("jewel-image");
         imageJewel.attr("src", "http://getdrawings.com/cliparts/sun-clipart-21.png");
         imageJewel.attr("data-jewel-value", numberOptions[i]);
-        $("#jewel" + (i+1)).append(imageJewel);
+        $("#sun" + (i+1)).append(imageJewel);
 
         console.log(numberOptions[i]);
 
